@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Coding on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhchnchn.github.io/"/>
-  <updated>2014-11-26T16:38:45.928Z</updated>
+  <updated>2014-11-26T16:41:11.000Z</updated>
   <id>http://zhchnchn.github.io/</id>
   
   <author>
@@ -15,42 +15,11 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://zhchnchn.github.io/2014/11/23/hello-world/"/>
-    <id>http://zhchnchn.github.io/2014/11/23/hello-world/</id>
-    <published>2014-11-23T13:52:47.000Z</published>
-    <updated>2014-11-23T13:52:47.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[]]></title>
-    <link href="http://zhchnchn.github.io/2014/11/23/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
-    <id>http://zhchnchn.github.io/2014/11/23/Markdown语法笔记/</id>
-    <published>2014-11-22T16:00:00.000Z</published>
-    <updated>2014-11-26T16:36:42.000Z</updated>
+    <link href="http://zhchnchn.github.io/2014/11/27/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    <id>http://zhchnchn.github.io/2014/11/27/Markdown语法笔记/</id>
+    <published>2014-11-26T16:00:00.000Z</published>
+    <updated>2014-11-26T16:40:54.000Z</updated>
     <content type="html"><![CDATA[<p>[TOC]</p>
 <p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
 <p>本文主要根据 <a href="https://stackedit.io/editor" target="_blank" rel="external">StackEdit</a> 编辑器首页的语法介绍以及 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a> 编辑器的 <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">语法手册</a> 来写成的，感谢原作者。另外，这两个都是很出色的 Markdown 在线编辑器，推荐大家使用。</p>
@@ -266,6 +235,37 @@
     </summary>
     
       <category term="Markdown" scheme="http://zhchnchn.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://zhchnchn.github.io/2014/11/23/hello-world/"/>
+    <id>http://zhchnchn.github.io/2014/11/23/hello-world/</id>
+    <published>2014-11-23T13:52:47.000Z</published>
+    <updated>2014-11-23T13:52:47.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
     
   </entry>
   
