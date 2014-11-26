@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Coding on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhchnchn.github.io/"/>
-  <updated>2014-11-26T16:58:03.785Z</updated>
+  <updated>2014-11-26T17:12:44.496Z</updated>
   <id>http://zhchnchn.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://zhchnchn.github.io/2014/11/27/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
     <id>http://zhchnchn.github.io/2014/11/27/Markdown语法笔记/</id>
     <published>2014-11-26T16:00:00.000Z</published>
-    <updated>2014-11-26T16:57:24.000Z</updated>
+    <updated>2014-11-26T17:12:14.000Z</updated>
     <content type="html"><![CDATA[<p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
 <p>本文主要根据 <a href="https://stackedit.io/editor" target="_blank" rel="external">StackEdit</a> 编辑器首页的语法介绍以及 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a> 编辑器的 <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">语法手册</a> 来写成的，感谢原作者。另外，这两个都是很出色的 Markdown 在线编辑器，推荐大家使用。</p>
 <h2 id="格式">格式</h2>
@@ -41,11 +41,11 @@
 <h3 id="注脚">注脚</h3>
 <p>使用 [^keyword] 表示注脚。keyword值必须与注脚中的关键字一致。keyword值不要与其它注脚的值重复。注脚会自动编号为[1],[2]…等。</p>
 <p>示例：</p>
-<p>这是第一个注脚[^footnote]示例。</p>
-<p>这是第二个注脚[^footnote]示例。</p>
+<p>这是第一个注脚[^footnote1]示例。</p>
+<p>这是第二个注脚[^footnote2]示例。</p>
 <p><strong>NOTE:</strong> 可以注意到即使将注脚的文本放在这儿，在解析后显示的时候，也会显示在文章的最后面。</p>
-<p>[^footnote]: 这是第一个 <em>注脚</em> 的 <strong>文本</strong>。</p>
-<p>[^footnote]: 这是第二个 <em>注脚</em> 的 <strong>文本</strong>。</p>
+<p>[^footnote1]: 这是第一个 <em>注脚</em> 的 <strong>文本</strong>。</p>
+<p>[^footnote2]: 这是第二个 <em>注脚</em> 的 <strong>文本</strong>。</p>
 <h3 id="标签">标签</h3>
 <p>在编辑区任意行的行首位置输入以下格式的文字可以给当前文档添加标签：</p>
 <pre><code>标签： 数学 英语 Md
@@ -91,6 +91,10 @@
 <h3 id="无序列表">无序列表</h3>
 <p>使用 *，+，- 表示无序列表。</p>
 <p>示例：</p>
+<pre><code><span class="bullet">* </span>无序列表项 一
+<span class="bullet">+ </span>无序列表项 二
+<span class="bullet">- </span>无序列表项 三
+</code></pre><p>显示效果：</p>
 <ul>
 <li>无序列表项 一</li>
 </ul>
@@ -117,6 +121,10 @@
 <h3 id="有序列表">有序列表</h3>
 <p>使用数字和点，后再跟一个空格表示有序列表。</p>
 <p>示例：</p>
+<pre><code><span class="bullet">1. </span>有序列表项 一
+<span class="bullet">1. </span>有序列表项 二
+<span class="bullet">3. </span>有序列表项 三
+</code></pre><p>显示效果：</p>
 <ol>
 <li>有序列表项 一</li>
 <li>有序列表项 二</li>
@@ -149,9 +157,6 @@
 
 <p>Python 示例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="decorator">@requires_authorization</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># A comment</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></div></pre></td></tr></table></figure>
-
-<p>Javascript 示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
 
 <h3 id="嵌套HTML">嵌套HTML</h3>
 <p>Markdown 语法支持在文件中嵌套 Html 标签。</p>
@@ -218,6 +223,12 @@
 </ul>
 <p>$$\sum_{i=1}^n a_i=0$$</p>
 <p>获取更多使用方法, 参阅 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax</a>。</p>
+<p><strong>NOTE:</strong> 为了确保数学表达式能在网页中正常显示，需要在你的网页中包含MathJax.js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"</span>&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
 <h3 id="UML图">UML图</h3>
 <ul>
 <li>序列图</li>
