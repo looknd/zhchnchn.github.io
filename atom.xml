@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Coding on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhchnchn.github.io/"/>
-  <updated>2014-11-26T17:12:44.496Z</updated>
+  <updated>2014-11-26T17:15:51.353Z</updated>
   <id>http://zhchnchn.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://zhchnchn.github.io/2014/11/27/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
     <id>http://zhchnchn.github.io/2014/11/27/Markdown语法笔记/</id>
     <published>2014-11-26T16:00:00.000Z</published>
-    <updated>2014-11-26T17:12:14.000Z</updated>
+    <updated>2014-11-26T17:15:36.000Z</updated>
     <content type="html"><![CDATA[<p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
 <p>本文主要根据 <a href="https://stackedit.io/editor" target="_blank" rel="external">StackEdit</a> 编辑器首页的语法介绍以及 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a> 编辑器的 <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">语法手册</a> 来写成的，感谢原作者。另外，这两个都是很出色的 Markdown 在线编辑器，推荐大家使用。</p>
 <h2 id="格式">格式</h2>
@@ -217,7 +217,7 @@
 <ul>
 <li>$ 表示行内公式： </li>
 </ul>
-<p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。</p>
+<p>质能守恒方程可以用一个很简洁的方程式 $ E=mc^2 $ 来表达。</p>
 <ul>
 <li>$$ 表示整行公式：</li>
 </ul>
