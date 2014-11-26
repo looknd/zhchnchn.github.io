@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Coding on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhchnchn.github.io/"/>
-  <updated>2014-11-24T15:41:47.853Z</updated>
+  <updated>2014-11-26T16:38:45.928Z</updated>
   <id>http://zhchnchn.github.io/</id>
   
   <author>
@@ -13,19 +13,6 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[My first post]]></title>
-    <link href="http://zhchnchn.github.io/2014/11/23/My-first-post/"/>
-    <id>http://zhchnchn.github.io/2014/11/23/My-first-post/</id>
-    <published>2014-11-23T14:02:36.000Z</published>
-    <updated>2014-11-23T14:02:36.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
@@ -55,6 +42,230 @@
     <summary type="html">
     <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
     </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[]]></title>
+    <link href="http://zhchnchn.github.io/2014/11/23/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    <id>http://zhchnchn.github.io/2014/11/23/Markdown语法笔记/</id>
+    <published>2014-11-22T16:00:00.000Z</published>
+    <updated>2014-11-26T16:36:42.000Z</updated>
+    <content type="html"><![CDATA[<p>[TOC]</p>
+<p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
+<p>本文主要根据 <a href="https://stackedit.io/editor" target="_blank" rel="external">StackEdit</a> 编辑器首页的语法介绍以及 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a> 编辑器的 <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">语法手册</a> 来写成的，感谢原作者。另外，这两个都是很出色的 Markdown 在线编辑器，推荐大家使用。</p>
+<h2 id="1_格式">1 格式</h2>
+<h3 id="1-1_标题">1.1 标题</h3>
+<p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。</p>
+<ul>
+<li>类 Setext 形式是用底线的形式，多个 = （一级标题）和 - （第二阶标题）连用标注标题。</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="header">This is an H1</span></div><div class="line">===</div><div class="line"></div><div class="line"><span class="header">This is an H2</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+<p>任何数量的 = 和 - 都可以有效果。</p>
+<ul>
+<li>类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：# H1, ## H2, ### H3，#### H4。</li>
+</ul>
+<h3 id="1-2_内容目录">1.2 内容目录</h3>
+<p>在段落中使用 <code>[TOC]</code> 可以显示全文内容的目录结构。</p>
+<p><strong>NOTE:</strong> 在什么地方插入 <code>[TOC]</code> ，整篇文章的目录结构就在那个地方显示。</p>
+<h3 id="1-3_注脚">1.3 注脚</h3>
+<p>使用 [^keyword] 表示注脚。keyword值必须与注脚中的关键字一致。keyword值不要与其它注脚的值重复。注脚会自动编号为[1],[2]…等。</p>
+<p>示例：</p>
+<p>这是第一个注脚[^footnote]示例。</p>
+<p>这是第二个注脚[^footnote]示例。</p>
+<p><strong>NOTE:</strong> 可以注意到即使将注脚的文本放在这儿，在解析后显示的时候，也会显示在文章的最后面。</p>
+<p>[^footnote]: 这是第一个 <em>注脚</em> 的 <strong>文本</strong>。</p>
+<p>[^footnote]: 这是第二个 <em>注脚</em> 的 <strong>文本</strong>。</p>
+<h3 id="1-4_标签">1.4 标签</h3>
+<p>在编辑区任意行的行首位置输入以下格式的文字可以给当前文档添加标签：</p>
+<pre><code>标签： 数学 英语 Md
+</code></pre><p>或者</p>
+<pre><code><span class="keyword">tags</span>： 数学 英语 Md
+</code></pre><p><strong>NOTE:</strong> 标签只能添加一次，比如我这篇文档在起始处添加了标签 <code>tags: Markdown</code>,所以在该处再添加<code>tags： 数学 英语 Md</code>不会起作用。</p>
+<h2 id="2_文本编辑">2 文本编辑</h2>
+<h3 id="2-1_文字引用">2.1 文字引用</h3>
+<p>使用 &gt; 表示引用其他文章的文字。</p>
+<p>示例：</p>
+<blockquote>
+<p>Markdown 的目标是实现「易读易写」。<br>Markdown 语法的目标是：成为一种适用于网络的书写语言。</p>
+</blockquote>
+<h3 id="2-2_粗体&amp;斜体">2.2 粗体&amp;斜体</h3>
+<p>使用 <em> 和 *</em> 表示斜体和粗体。</p>
+<p>示例：</p>
+<p>这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
+<h3 id="2-3_删除线">2.3 删除线</h3>
+<p>在要删除的文本前后，添加 ~~，表示删除线。</p>
+<p>示例：</p>
+<p><del>这是一段错误的文本。</del></p>
+<h2 id="3_链接">3 链接</h2>
+<h3 id="3-1_外链接">3.1 外链接</h3>
+<p>使用 [描述](URL链接地址) 为<strong>文字</strong>增加外链接。</p>
+<p>示例：</p>
+<p>这是去往 <a href="https://www.zybuluo.com" target="_blank" rel="external">Cmd Markdown</a> 的链接。</p>
+<h3 id="3-2_链接图片">3.2 链接图片</h3>
+<p>使用 ![图片描述](图片URL链接地址) 插入图片。</p>
+<p><strong>NOTE:</strong> 图片描述 文字并不会显示出来，但为了清晰起见，最好加上。图片链接与外链接非常相似，只是在最前面多了一个！号。</p>
+<p>示例：</p>
+<p><img src="http://zhchnchn.qiniudn.com/Image/Markdown/UploadDemo.png" alt="Script Error Demo"></p>
+<h3 id="3-3_内嵌图标">3.3 内嵌图标</h3>
+<p>在文档中输入 <code>&lt;i class=&quot;icon-XXX&quot; icon-2x&gt;&lt;/i&gt;</code> 即可显示内嵌图标(icon-2x表示放大2倍显示)</p>
+<p>示例：</p>
+<ul>
+<li>显示微博的图标： <i class="icon-weibo icon-2x"></i></li>
+<li>显示人人的图标： <i class="icon-renren"></i></li>
+<li>显示设置图标：  <i class="icon-cog"></i></li>
+<li>显示垃圾桶图标： <i class="icon-trash"></i></li>
+</ul>
+<p>更多的icon图标可参考 <a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank" rel="external">Font Awesome</a></p>
+<h2 id="4_列表">4 列表</h2>
+<h3 id="4-1_无序列表">4.1 无序列表</h3>
+<p>使用 *，+，- 表示无序列表。</p>
+<p>示例：</p>
+<ul>
+<li>无序列表项 一</li>
+</ul>
+<ul>
+<li>无序列表项 二</li>
+</ul>
+<ul>
+<li>无序列表项 三</li>
+</ul>
+<p>无序列表还可以通过缩进可以分级。</p>
+<p>示例：</p>
+<ul>
+<li>无序列表项1<ul>
+<li>无序列表项1.1<ul>
+<li>无序列表项1.1.1<ul>
+<li>无序列表项1.1.1.1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2_有序列表">4.2 有序列表</h3>
+<p>使用数字和点，后再跟一个空格表示有序列表。</p>
+<p>示例：</p>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
+</ol>
+<p>可以看到，即使中间的数字的不正确，也能显示出正确的有序列表。同无序列表一样，有序列表通过缩进也可以分级。</p>
+<h3 id="4-3_定义型列表">4.3 定义型列表</h3>
+<p>名词<br>:    定义（左侧有一个可见的冒号和四个不可见的空格）</p>
+<p>示例<br>:   这是代码块的解释（左侧有一个可见的冒号和四个不可见的空格）</p>
+<pre><code>    代码块（左侧有八个不可见的空格）
+</code></pre><h2 id="5_代码块">5 代码块</h2>
+<h3 id="5-1_行内代码块">5.1 行内代码块</h3>
+<p>使用 `code blocks` 表示行内代码块。</p>
+<p>示例：</p>
+<p>C++使用string之前，需要 <code>#include &lt;string&gt;</code>。</p>
+<h3 id="5-2_整段代码块">5.2 整段代码块</h3>
+<p>使用 四个缩进空格，或者一个Tab，表示代码块。</p>
+<p>示例：</p>
+<pre><code><span class="class"><span class="keyword">class</span> <span class="title">Object</span>
+</span>{
+    <span class="keyword">private</span>:
+    <span class="keyword">int</span> sun
+    <span class="keyword">double</span> *rate;
+    <span class="keyword">void</span> Func(<span class="keyword">int</span> * <span class="keyword">sum</span>);
+}
+</code></pre><h3 id="5-3_增强的代码块">5.3 增强的代码块</h3>
+<p>Github的增强的代码块功能，它使用 <strong>Highlight.js</strong> 支持41种编程语言的语法高亮的显示，行号显示。</p>
+<p>C++ 示例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class</span> Base {</div><div class="line">    <span class="keyword">void</span> f() {</div><div class="line">        std::<span class="built_in">cerr</span> &lt;&lt; <span class="string">"Base&lt;T&gt;::f\n"</span>;</div><div class="line">    }</div><div class="line">};</div></pre></td></tr></table></figure>
+
+<p>Python 示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="decorator">@requires_authorization</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># A comment</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></div></pre></td></tr></table></figure>
+
+<p>Javascript 示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+
+<h3 id="5-4_嵌套HTML">5.4 嵌套HTML</h3>
+<p>Markdown 语法支持在文件中嵌套 Html 标签。</p>
+<p>示例：用 Html 代码写一个表格：</p>
+<pre><code><span class="tag">&lt;<span class="title">table</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">th</span> <span class="attribute">rowspan</span>=<span class="value">"2"</span>&gt;</span>值班人员<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">th</span>&gt;</span>星期一<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">th</span>&gt;</span>星期二<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">th</span>&gt;</span>星期三<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">td</span>&gt;</span>李强<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">td</span>&gt;</span>张明<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">td</span>&gt;</span>王平<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+</code></pre><p>上面的 Html 代码的显示效果如下：</p>
+<table><br>    <tr><br>        <th rowspan="2">值班人员</th><br>        <th>星期一</th><br>        <th>星期二</th><br>        <th>星期三</th><br>    </tr><br>    <tr><br>        <td>李强</td><br>        <td>张明</td><br>        <td>王平</td><br>    </tr><br></table>
+
+<h2 id="6_表格">6 表格</h2>
+<p>第二行 <code>| -------- | ----: | :---: |</code> 在生成表格时是必需的，它用来分隔表头和表体，在它上面的是表头，在它下面的是表体。</p>
+<p>可以在虚线两侧添加冒号：来定义列的对齐方式。</p>
+<ul>
+<li><code>----------</code> 默认是左对齐，等价于 <code>:---------</code></li>
+<li><code>---------:</code> 表示右对齐</li>
+<li><code>:--------:</code> 表示右对齐</li>
+</ul>
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:right">Value</th>
+<th style="text-align:center">Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer</td>
+<td style="text-align:right">$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td style="text-align:right">$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td style="text-align:right">$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h2 id="其它">其它</h2>
+<h3 id="LaTex公式">LaTex公式</h3>
+<ul>
+<li>$ 表示行内公式： </li>
+</ul>
+<p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。</p>
+<ul>
+<li>$$ 表示整行公式：</li>
+</ul>
+<p>$$\sum_{i=1}^n a_i=0$$</p>
+<p>获取更多使用方法, 参阅 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax</a>。</p>
+<h3 id="UML图">UML图</h3>
+<ul>
+<li>序列图</li>
+</ul>
+<p>获取语法，参阅 <a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="external">Sequence Diagram</a></p>
+<ul>
+<li>流程图</li>
+</ul>
+<p>获取语法，参阅 <a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="external">Flow Chart</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>[TOC]</p>
+<p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
+<p>本文主要根据 <a href="https://stackedit.io/e]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://zhchnchn.github.io/tags/Markdown/"/>
     
   </entry>
   
