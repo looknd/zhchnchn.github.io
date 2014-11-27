@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Coding on the way]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhchnchn.github.io/"/>
-  <updated>2014-11-26T17:15:51.353Z</updated>
+  <updated>2014-11-27T14:56:08.282Z</updated>
   <id>http://zhchnchn.github.io/</id>
   
   <author>
@@ -19,9 +19,10 @@
     <link href="http://zhchnchn.github.io/2014/11/27/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
     <id>http://zhchnchn.github.io/2014/11/27/Markdown语法笔记/</id>
     <published>2014-11-26T16:00:00.000Z</published>
-    <updated>2014-11-26T17:15:36.000Z</updated>
+    <updated>2014-11-27T14:54:33.000Z</updated>
     <content type="html"><![CDATA[<p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
 <p>本文主要根据 <a href="https://stackedit.io/editor" target="_blank" rel="external">StackEdit</a> 编辑器首页的语法介绍以及 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a> 编辑器的 <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">语法手册</a> 来写成的，感谢原作者。另外，这两个都是很出色的 Markdown 在线编辑器，推荐大家使用。</p>
+<p><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">http://zipperary.com/categories/hexo/</a><br><a href="http://fionat.github.io/blog/categories/Hexo/" target="_blank" rel="external">http://fionat.github.io/blog/categories/Hexo/</a></p>
 <h2 id="格式">格式</h2>
 <h3 id="标题">标题</h3>
 <p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。</p>
@@ -39,7 +40,7 @@
 <p><strong>NOTE:</strong> 在什么地方插入 <code>[TOC]</code> ，整篇文章的目录结构就在那个地方显示。</p>
 <p>[TOC]</p>
 <h3 id="注脚">注脚</h3>
-<p>使用 [^keyword] 表示注脚。keyword值必须与注脚中的关键字一致。keyword值不要与其它注脚的值重复。注脚会自动编号为[1],[2]…等。</p>
+<p>使用 [^keyword] 表示注脚。keyword值必须与注脚中的关键字一致。keyword值不要与其它注脚的值重复。注脚会自动编号为<a href="https://www.zybuluo.com" title="作业部落" target="_blank" rel="external">1</a>,<a href="https://stackedit.io/editor" title="StackEditor" target="_blank" rel="external">2</a>…等。</p>
 <p>示例：</p>
 <p>这是第一个注脚[^footnote1]示例。</p>
 <p>这是第二个注脚[^footnote2]示例。</p>
@@ -52,29 +53,94 @@
 </code></pre><p>或者</p>
 <pre><code><span class="keyword">tags</span>： 数学 英语 Md
 </code></pre><p><strong>NOTE:</strong> 标签只能添加一次，比如我这篇文档在起始处添加了标签 <code>tags: Markdown</code>,所以在该处再添加<code>tags： 数学 英语 Md</code>不会起作用。</p>
-<h2 id="文本编辑">文本编辑</h2>
-<h3 id="文字引用">文字引用</h3>
+<h3 id="分隔线">分隔线</h3>
+<p>你可以在一行中用3个以上的星号、减号来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<pre><code><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span>
+<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
+---
+-----------------
+</code></pre><h2 id="文本编辑">文本编辑</h2>
+<h3 id="段落">段落</h3>
+<p>段落在HTML中使用<code>&lt;p&gt;</code>来表示。在Markdown里面，段落的前后要有一个以上的空行（若某一行只包含空格和制表符，则该行也会被视为空行）</p>
+<h3 id="区块引用（Blockquotes）">区块引用（Blockquotes）</h3>
 <p>使用 &gt; 表示引用其他文章的文字。</p>
 <p>示例：</p>
 <blockquote>
 <p>Markdown 的目标是实现「易读易写」。<br>Markdown 语法的目标是：成为一种适用于网络的书写语言。</p>
 </blockquote>
+<p>区块引用也可以嵌套，比如</p>
+<pre><code>&gt; <span class="constant">This</span> is the first level of quoting.
+<span class="input"><span class="prompt">&gt;
+&gt;</span> &gt; <span class="constant">This</span> is nested blockquote.</span>
+<span class="input"><span class="prompt">&gt; （NOTE：这个空行是必须的，否则下面的一行会被视为嵌套的引用）
+&gt;</span> <span class="constant">Back</span> to the **first level**.</span>
+</code></pre><p>显示效果：</p>
+<blockquote>
+<p>This is the first level of quoting.</p>
+<blockquote>
+<p>This is nested blockquote.</p>
+</blockquote>
+<p>Back to the <strong>first level</strong>.</p>
+</blockquote>
+<p>可以注意到，区块引用内的其它 Markdown 语法，包括标题、列表、强调等，仍然是生效的。</p>
 <h3 id="粗体&amp;斜体">粗体&amp;斜体</h3>
-<p>使用 <em> 和 *</em> 表示斜体和粗体。</p>
+<p>使用星号（*）和下划线（_）表示强调。单个（*）和下划线（_） 表示斜体，两个（*）和下划线（_） 表示粗体。如果你的星号（*）和下划线（_）两边都有空白的话，它们就只会被当成普通的符号。</p>
 <p>示例：</p>
-<p>这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
+<pre><code>这是 <span class="keyword">*</span>斜体<span class="keyword">*</span>，这是 <span class="keyword">*</span><span class="keyword">*</span>粗体<span class="keyword">*</span><span class="keyword">*</span>。
+这是 _斜体_，这是 __粗体__。
+</code></pre><p>显示效果：</p>
+<p>这是 <em>斜体</em>，这是 <strong>粗体</strong>。<br>这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
 <h3 id="删除线">删除线</h3>
 <p>在要删除的文本前后，添加 ~~，表示删除线。</p>
 <p>示例：</p>
 <p><del>这是一段错误的文本。</del></p>
-<h2 id="链接">链接</h2>
+<h3 id="转义字符">转义字符</h3>
+<p>Markdown使用反斜杠 \ 转义有特殊意义的字符。支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<pre><code>\   反斜线
+`   反引号
+<span class="bullet">*   </span>星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+<span class="header">#   井字号</span>
+<span class="bullet">+   </span>加号
+<span class="bullet">-   </span>减号
+.   英文句点
+!   惊叹号
+</code></pre><h2 id="链接">链接</h2>
 <h3 id="外链接">外链接</h3>
-<p>使用 [描述](URL链接地址) 为<strong>文字</strong>增加外链接。</p>
+<p>Markdown 支持2种形式的链接语法： <strong>行内式</strong>和<strong>参考式</strong>。</p>
+<ul>
+<li>行内式： 使用 [描述](URL链接地址) 为“描述”的文字增加外链接。如果还想要加上链接的 title 内容，只要在网址后面，用双引号把 title 内容包起来即可。</li>
+</ul>
 <p>示例：</p>
-<p>这是去往 <a href="https://www.zybuluo.com" target="_blank" rel="external">Cmd Markdown</a> 的链接。</p>
+<pre><code>这是去往 [<span class="link_label">Cmd Markdown</span>](<span class="link_url">https://www.zybuluo.com "作业部落"</span>) 的链接。当鼠标放置于“Cmd Markdown”之上时，会弹出"作业部落"的提示文字。
+</code></pre><p>显示效果：</p>
+<p>这是去往 <a href="https://www.zybuluo.com" title="作业部落" target="_blank" rel="external">Cmd Markdown</a> 的链接。当鼠标放置于“Cmd Markdown”之上时，会弹出”作业部落”的提示文字。</p>
+<ul>
+<li>参考式： 是在链接文字的方括号后面再接上另一个方括号，在第二个方括号里面要填入用以辨识链接的标记。</li>
+</ul>
+<p>链接标签可以有字母、数字、空白和标点符号，但是并不区分大小写。</p>
+<p>这个标记的链接内容的定义，可以紧随其后，也可以放在文章的任意位置。链接内容定义的形式为：<br>[链接文字]+冒号+一个以上的空格或制表符+链接的网址+空格+title内容（可选，可以用单引号、双引号或是括弧包裹）。</p>
+<p>示例：</p>
+<pre><code>这是去往 [<span class="link_label">Cmd Markdown</span>][<span class="link_reference">1</span>] 的链接。
+这是去往 [<span class="link_label">Stack Edit</span>][<span class="link_reference">2</span>] 的链接。
+
+[<span class="link_reference">1</span>]:<span class="link_url"> https://www.zybuluo.com "作业部落"</span><span class="link_url">
+[2]: https://stackedit.io/editor (StackEditor)</span>
+</code></pre><p>显示效果：</p>
+<p>这是去往 <a href="https://www.zybuluo.com" title="作业部落" target="_blank" rel="external">Cmd Markdown</a> 的链接。<br>这是去往 <a href="https://stackedit.io/editor" title="StackEditor" target="_blank" rel="external">Stack Edit</a> 的链接。</p>
+<h3 id="自动链接">自动链接</h3>
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。</p>
+<p>示例：</p>
+<pre><code>&lt;http<span class="variable">s:</span>//www.google.<span class="keyword">com</span>/&gt;
+</code></pre><p>显示效果：</p>
+<p><a href="https://www.google.com/" target="_blank" rel="external">https://www.google.com/</a></p>
 <h3 id="链接图片">链接图片</h3>
-<p>使用 ![图片描述](图片URL链接地址) 插入图片。</p>
-<p><strong>NOTE:</strong> 图片描述 文字并不会显示出来，但为了清晰起见，最好加上。图片链接与外链接非常相似，只是在最前面多了一个！号。</p>
+<p>Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： <strong>行内式</strong>和<strong>参考式</strong>。<br>行内式语法： 使用 ![图片描述](图片URL链接地址) 插入图片。<br>参考式语法： 使用 ![图片描述][id] 插入图片。</p>
+<p>从上面的语法可以看出，图片链接与外链接非常相似，只是在最前面多了一个！号。到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 <img> 标签。</p>
+<p><strong>NOTE:</strong> [图片描述] 的文字并不会显示出来，但为了清晰起见，最好加上。</p>
 <p>示例：</p>
 <p><img src="http://zhchnchn.qiniudn.com/Image/Markdown/UploadDemo.png" alt="Script Error Demo"></p>
 <h3 id="内嵌图标">内嵌图标</h3>
@@ -87,6 +153,16 @@
 <li>显示垃圾桶图标： <i class="icon-trash"></i></li>
 </ul>
 <p>更多的icon图标可参考 <a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank" rel="external">Font Awesome</a></p>
+<h3 id="嵌入音乐，视频">嵌入音乐，视频</h3>
+<p>Hexo中，markdown支持html标签，我们只要在文章中插入符合html规范的代码即可。</p>
+<p>对音乐和视频网站，每个音乐或视频的页面都有一个 <strong>分享</strong> 或 <strong>转贴</strong>  按钮，一般都会提供html代码或javascript代码，将其复制到文章中即可。</p>
+<p>示例：</p>
+<p>音乐链接：</p>
+<embed src="http://www.xiami.com/widget/0_911528955_235_346_FF8719_494949/albumPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="transparent">
+
+<p>视频链接：</p>
+<embed src="http://player.youku.com/player.php/sid/XMjcwNjg5MTk2/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+
 <h2 id="列表">列表</h2>
 <h3 id="无序列表">无序列表</h3>
 <p>使用 *，+，- 表示无序列表。</p>
@@ -137,9 +213,12 @@
 <pre><code>    代码块（左侧有八个不可见的空格）
 </code></pre><h2 id="代码块">代码块</h2>
 <h3 id="行内代码块">行内代码块</h3>
-<p>使用 `code blocks` 表示行内代码块。</p>
+<p>使用 反引号`code blocks` 表示行内代码块。如果要在代码区段内也插入反引号，你可以用多个反引号来开启和结束代码区段：</p>
 <p>示例：</p>
-<p>C++使用string之前，需要 <code>#include &lt;string&gt;</code>。</p>
+<pre><code>C++使用<span class="built_in">string</span>之前，需要 <span class="string">`#include &lt;string&gt;`</span>。
+A single backtick <span class="keyword">in</span> a code span: <span class="string">``</span> <span class="string">` `</span><span class="string">`</span>
+</code></pre><p>显示效果：</p>
+<p>C++使用string之前，需要 <code>#include &lt;string&gt;</code>。<br>A single backtick in a code span: <code>` </code></p>
 <h3 id="整段代码块">整段代码块</h3>
 <p>使用 四个缩进空格，或者一个Tab，表示代码块。</p>
 <p>示例：</p>
@@ -151,7 +230,22 @@
     <span class="keyword">void</span> Func(<span class="keyword">int</span> * <span class="keyword">sum</span>);
 }
 </code></pre><h3 id="增强的代码块">增强的代码块</h3>
-<p>Github的增强的代码块功能，它使用 <strong>Highlight.js</strong> 支持41种编程语言的语法高亮的显示，行号显示。</p>
+<p><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">GitHub Flavored Markdown(GFM)</a> 提供了一个增强的代码块语法，使用`` </p>
+<figure class="highlight ``code"><figcaption><span>blocks`` ``` ``包裹代码，这样就不需要再缩进2个空格或tab了。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">示例：</div></pre></td></tr></table></figure>
+
+<pre><code><span class="class"><span class="keyword">class</span> <span class="title">Object</span>
+</span>{
+   <span class="keyword">private</span>:
+   <span class="keyword">int</span> sun
+    <span class="keyword">double</span> *rate;
+    <span class="keyword">void</span> Func(<span class="keyword">int</span> * <span class="keyword">sum</span>);
+}
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">显示效果如下：</div></pre></td></tr></table></figure>
+
+<p>class Object<br>{<br>   private:<br>   int sun<br>    double <em>rate;<br>    void Func(int </em> sum);<br>}</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">更进一步的，GFM提供了增强的代码块的语法高亮功能能，你可以在<span class="string">``</span></div></pre></td></tr></table></figure>
+
+<p> ``后面添加一个语言标识，它会自动检测语言种类并使用 <strong>Highlight.js</strong>来对代码高亮显示。对41种编程语言的语法高亮进行支持，并能显示行号。</p>
 <p>C++ 示例：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class</span> Base {</div><div class="line">    <span class="keyword">void</span> f() {</div><div class="line">        std::<span class="built_in">cerr</span> &lt;&lt; <span class="string">"Base&lt;T&gt;::f\n"</span>;</div><div class="line">    }</div><div class="line">};</div></pre></td></tr></table></figure>
 
@@ -238,6 +332,8 @@
 <li>流程图</li>
 </ul>
 <p>获取语法，参阅 <a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="external">Flow Chart</a></p>
+<h2 id="参考资料">参考资料</h2>
+<p><a href="https://stackedit.io/editor" target="_blank" rel="external">Stack Edit</a><br><a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">Cmd Markdown语法手册</a><br><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在Github上搭建Git Pages 博客，肯定是要用 Markdown 来写作啦，那么第一篇博文做一个 Markdown 语法的学习笔记是再合适不过了。</p>
